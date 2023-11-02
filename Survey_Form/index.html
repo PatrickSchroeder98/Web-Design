@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Survey</title>
+    <link href="styles.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <div>
+      <main>
+        <h1 id="title">Survey form</h1>
+        <p id="description">This is a survey form that helps us to get a feedback from our user.</p>
+        <hr>
+        <form id="survey-form" method="post" action='https://register-demo.freecodecamp.org'>
+          <fieldset>
+            <label for="name" id="name-label">Enter Your First Name: <input id="name" name="first-name" type="text" placeholder="Enter your name" required /></label>
+            <label for="email" id="email-label">Enter Your Email: <input id="email" name="email" type="email" placeholder="Enter your email" required /></label>
+            <label for="age" id="number-label">Input your age (years): <input id="number" type="number" name="age" min="13" max="120" placeholder="Enter your age" /></label>
+          </fieldset>
+          <fieldset>
+            <label for="referrer">How did you hear about us?
+              <select id="dropdown" name="referrer">
+                <option value="">(select one)</option>
+                <option value="1">Ads</option>
+                <option value="2">YouTube Channel</option>
+                <option value="3">Recommendation</option>
+                <option value="4">Other</option>
+              </select>
+            </label>
+          </fieldset>
+          <fieldset>
+            <h>Would you recommend our product to a friend?</h>
+            <label for="yes"><input id="yes" type="radio" name="recommend-type" class="inline" value="yes" checked /> Definitely yes</label>
+            <label for="rather-yes"><input id="rather-yes" type="radio" name="recommend-type" class="inline" value="rather-yes" /> Rather yes</label>
+            <label for="not-sure"><input id="not-sure" type="radio" name="recommend-type" class="inline" value="not-sure" /> Not sure</label>
+            <label for="rather-not"><input id="rather-not" type="radio" name="recommend-type" class="inline" value="rather-not" /> Rather not</label>
+            <label for="no"><input id="no" type="radio" name="recommend-type" class="inline" value="no" /> Definitely no</label>
+          </fieldset>
+          <fieldset>
+            <h>What would you like to see improved? (Check all that apply)</h>
+            <label for="customer-service">
+              <input id="customer-service" type="checkbox" name="customer-service" value="customer-service" class="inline"/> Customer service
+            </label>
+            <label for="product-description">
+              <input id="product-description" type="checkbox" name="product-description" value="product-description" class="inline" /> Product description
+            </label>
+            <label for="demo">
+              <input id="demo" type="checkbox" name="demo" value="demo" class="inline" /> Community edition of product
+            </label>
+            <label for="bugs">
+              <input id="bugs" type="checkbox" name="bugs" value="bugs" class="inline" /> Solving problems with product
+            </label>
+          </fieldset>
+
+          <fieldset>
+            <label for="comment">Additional comments:
+              <textarea id="comment" name="comment" rows="3" cols="30" value="comment" placeholder="I would like to add..."></textarea>
+            </label>
+          </fieldset>
+
+          <input id="submit" type="submit" value="Submit" />
+        </form>
+      </main>
+    </div>
+  </body>
+</html>
