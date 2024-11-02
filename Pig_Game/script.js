@@ -14,14 +14,29 @@ const btnNew = document.querySelector('.btn--new');
 const btnRoll = document.querySelector('.btn--roll');
 const btnHold = document.querySelector('.btn--hold');
 
-score0El.textContent = 0;
-score1El.textContent = 0;
-diceEl.classList.add('hidden');
+const init = function () {
+    score0El.textContent = 0;
+    score1El.textContent = 0;
+    current0El.textContent = 0;
+    current1El.textContent = 0;
 
-const scores = [0, 0];
-let currentScore = 0;
-let activePlayer = 0;
-let playing = true;
+    player0EL.classList.remove('player--winner');
+    player1EL.classList.remove('player--winner');
+
+    player0EL.classList.add('player--active');
+    player1EL.classList.remove('player--active');
+
+    scores = [0, 0];
+    currentScore = 0;
+    activePlayer = 0;
+    playing = true;
+
+    diceEl.classList.add('hidden');
+
+}
+
+let scores, currentScore, activePlayer, playing;
+init();
 
 btnRoll.addEventListener('click', function () {
     if(playing) {
@@ -65,3 +80,5 @@ const switchPlayer = function() {
     player0EL.classList.toggle('player--active');
     player1EL.classList.toggle('player--active');
 }
+
+btnNew.addEventListener('click', init);
